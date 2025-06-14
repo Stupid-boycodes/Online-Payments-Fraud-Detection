@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make a Prediction</title>
+    <style>
+        body {
+            background-color: #b3e5fc;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 25px;
+            padding: 10px 15px;
+            background-color: #1e88e5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1><b>Online Payments Fraud Detection</b></h1>
+        <form action="/pred" method="post">
+            <label for="step">Step - Time taken for transaction</label>
+            <input type="number" name="step" placeholder="e.g., 1" required>
+
+            <label for="type">Type of Transaction</label>
+            <select name="type" required>
+                <option value="0">CASH_IN</option>
+                <option value="1">CASH_OUT</option>
+                <option value="2">DEBIT</option>
+                <option value="3">PAYMENT</option>
+                <option value="4">TRANSFER</option>
+            </select>
+
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" step="any" placeholder="Transaction Amount" required>
+
+            <label for="oldbalanceOrg">Balance before the transaction</label>
+            <input type="number" name="oldbalanceOrg" step="any" placeholder="Sender Balance Before" required>
+
+            <label for="newbalanceOrig">Balance after the transaction</label>
+            <input type="number" name="newbalanceOrig" step="any" placeholder="Sender Balance After" required>
+
+            <label for="oldbalanceDest">Initial balance of recipient</label>
+            <input type="number" name="oldbalanceDest" step="any" placeholder="Receiver Balance Before" required>
+
+            <label for="newbalanceDest">New balance of recipient</label>
+            <input type="number" name="newbalanceDest" step="any" placeholder="Receiver Balance After" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

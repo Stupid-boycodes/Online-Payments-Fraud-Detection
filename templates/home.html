@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Payments Fraud Detection</title>
+    <style>
+        body {
+            background-color: #b3e5fc;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .navbar {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        .navbar a {
+            padding: 10px 20px;
+            background-color: #2196f3;
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        .navbar a:hover {
+            background-color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <a href="/predict">Predict</a>
+    </div>
+
+    <div class="container">
+        <h1><b>Welcome to the Online Payments Fraud Detection System</b></h1>
+        <p><i>
+            This application leverages machine learning to analyze transaction patterns and predict the likelihood of fraudulent activity in real-time. By entering transaction details,                  users can instantly get insights into whether a transaction appears legitimate or potentially fraudulent. Built using Python, Flask, and a trained classification model, this system aims to assist in early fraud detection and enhance financial security.The model used here is Random forest classifier. By clicking the predict button at the top right, you will be directed to a page to enter the details of your transaction.
+        </i></p>
+    </div>
+</body>
+</html>
